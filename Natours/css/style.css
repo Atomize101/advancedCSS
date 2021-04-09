@@ -30,4 +30,51 @@ body {
 	background-position: top;
 	/* clip-path allows us to change the shape of the header */
 	clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+	position: relative;
+}
+
+.logo-box {
+	position: absolute;
+	/* The position for the logo is relative because the parent element is in the header. Refer to html file */
+	top: 40px;
+	left: 40px;
+}
+
+.logo {
+	height: 35px;
+}
+
+/* The next part styles the main heading text
+    it uses the html tag span to seperate the two heading texts
+*/
+
+/* display: block occupies 100 percent of the width */
+
+.text-box {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	/* the transform moves the entire text logo 50 percent of the top and left 
+        the transform is for the element itself
+    */
+	transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.heading-primary-main {
+	display: block;
+	font-size: 60px;
+	font-weight: 400;
+	letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 17.4px;
 }
