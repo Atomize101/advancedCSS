@@ -44,6 +44,12 @@ body {
 	height: 35px;
 }
 
+/* 
+.logo:hover {
+	animation: moveInRight 2s ease-out;
+}
+ */
+
 /* The next part styles the main heading text
     it uses the html tag span to seperate the two heading texts
 */
@@ -58,6 +64,7 @@ body {
         the transform is for the element itself
     */
 	transform: translate(-50%, -50%);
+	text-align: center;
 }
 
 .heading-primary {
@@ -66,6 +73,7 @@ body {
 
 	/* backface-visibility hides the back of the element, in this case it steadies the animation */
 	backface-visibility: hidden;
+	margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -124,4 +132,28 @@ body {
 		opacity: 1;
 		transform: translate(0);
 	}
+}
+
+.btn:link,
+.btn:visited {
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 15px 40px;
+	display: inline-block; /* should display inline block when needing to add padding to buttons */
+	border-radius: 100px; /* this gives the button a round shape */
+	transition: all 0.2s;
+}
+
+.btn:hover {
+	transform: translateY(-3px); /* this moves the button up slightly on hover */
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Shadow for the button, values are, X, Y, blur, and shadow color. The .2 is opacity */
+}
+
+.btn:active {
+	transform: translateY(-1px);
+}
+
+.btn-white {
+	background-color: #fff;
+	color: #777;
 }
