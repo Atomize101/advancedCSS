@@ -134,6 +134,18 @@ body {
 	}
 }
 
+@keyframes moveInBottom {
+	0% {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
 .btn:link,
 .btn:visited {
 	text-transform: uppercase;
@@ -142,6 +154,7 @@ body {
 	display: inline-block; /* should display inline block when needing to add padding to buttons */
 	border-radius: 100px; /* this gives the button a round shape */
 	transition: all 0.2s;
+	position: relative;
 }
 
 .btn:hover {
@@ -156,4 +169,33 @@ body {
 .btn-white {
 	background-color: #fff;
 	color: #777;
+}
+
+/* pseudo element that animates the button further */
+.btn::after {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	border-radius: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transition: all 0.4s;
+}
+
+.btn-white::after {
+	background-color: #fff;
+}
+
+/* this causes the button to grow on hover */
+.btn:hover::after {
+	transform: scaleX(1.4) scaleY(1.6);
+	opacity: 0; /* trick to fading something out */
+}
+
+.btn-animated {
+	animation: moveInBottom 0.5s ease-out 0.75s;
+	animation-fill-mode: backwards;
 }
