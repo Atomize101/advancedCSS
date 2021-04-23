@@ -28,3 +28,33 @@ The computed value of a property is what gets inherited, not the declared value
 Inheritance of a property only works if no one delcares a value for that property
 The inherit keyword forces inheritance on a certain property
 The initial keyword resets a property to its initial value
+
+Block-box notes
+
+Block-level boxes
+Elements formatted visually as blocks
+100% of parents width
+Vertically, one after another
+Box-model applies as showed
+
+display: block
+(display: flex)
+(display: list-item)
+(display: table)
+
+Inline-block boxes
+A mix of block and inline
+Occupies only contents space
+No line-breaks
+Box-model applies as showed
+
+display: inline-block
+
+Inline boxes
+Content is distributed in lines
+Occupies only content's space
+No line-breaks
+No heights and widths
+Paddings and margins only horizontal (left and right)
+
+display: inline
