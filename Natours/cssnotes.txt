@@ -58,3 +58,38 @@ No heights and widths
 Paddings and margins only horizontal (left and right)
 
 display: inline
+
+Positioning schemes: normal flow, absolute positioning and floats
+
+Stacking contexts and the z-index
+z-index: 3
+position relative
+
+z-index: 2
+position: absolute
+
+z-index: 1
+position: relative
+
+BEM
+Block Element Modifier
+Block: standalone component that is meaningful on its own
+Element: part of a block that has no standalone meaning.
+Modifier: a different version off a block or an element.
+
+.block {}
+.block__element {}
+.block__element--modifier
+
+The 7-1 pattern
+7 different folders for partial Sass files and 1 main Sass file to import
+all other files into a compiled CSS stylesheet
+
+The 7 folders are:
+base/
+components/
+layout/
+pages/
+themes/
+abstracts/
+vendors/
