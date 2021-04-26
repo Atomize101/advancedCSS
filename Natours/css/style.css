@@ -19,65 +19,6 @@ body {
   /* Padding around the entire page */
   box-sizing: border-box; }
 
-.header {
-  height: 95vh;
-  /* This fades the background image and has colors over it */
-  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  /* clip-path allows us to change the shape of the header */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative; }
-  .header__logo-box {
-    position: absolute;
-    /* The position for the logo is relative because the parent element is in the header. Refer to html file */
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    /* the transform moves the entire text logo 50 percent of the top and left 
-            the transform is for the element itself
-        */
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-/* 
-.logo:hover {
-	animation: moveInRight 2s ease-out;
-}
- */
-/* The next part styles the main heading text
-    it uses the html tag span to seperate the two heading texts
-*/
-/* display: block occupies 100 percent of the width */
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  /* backface-visibility hides the back of the element, in this case it steadies the animation */
-  backface-visibility: hidden;
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    /* animation-delay: 3s;
-            animation-iteration-count: 3;
-        */ }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 1s ease-out; }
-
 /* this animates the logo text to slide to the left then back to the right and then slightly back to center */
 @keyframes moveInLeft {
   0% {
@@ -106,6 +47,30 @@ body {
   100% {
     opacity: 1;
     transform: translate(0); } }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  /* backface-visibility hides the back of the element, in this case it steadies the animation */
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-delay: 3s;
+            animation-iteration-count: 3;
+        */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
 
 .btn {
   /* pseudo element that animates the button further */ }
@@ -152,3 +117,29 @@ body {
   .btn--animated {
     animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards; }
+
+.header {
+  height: 95vh;
+  /* This fades the background image and has colors over it */
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  /* clip-path allows us to change the shape of the header */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    /* The position for the logo is relative because the parent element is in the header. Refer to html file */
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* the transform moves the entire text logo 50 percent of the top and left 
+            the transform is for the element itself
+        */
+    transform: translate(-50%, -50%);
+    text-align: center; }
